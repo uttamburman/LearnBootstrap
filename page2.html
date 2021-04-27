@@ -1,0 +1,116 @@
+
+<html>
+<head>
+  <title>
+    Glixcel
+  </title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous">
+      </script>
+      <script src="Webscript.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="stylesheet.css" type="text/css">
+</head>
+<body>
+<div class="container color_container" style="margin-top: 100px; background-color: grey">
+    <form>
+  <div class="form-group">
+    <label for="formGroupExampleInput"><h5>Title</h5></label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder=" Give Title of The Topic">
+  </div>
+</form>
+
+<br>
+<form>
+
+  <div class="form-group">
+            <label for="disc"><h5>Discription</h5></label>
+            <textarea class="form-control" placeholder="Brief about the Topic" rows="4"></textarea>
+          </div>
+ 
+</form>
+<br>
+<div><h5> Pic Related to topic</h5> Select File
+  <input type="file" class="form-control-file" id="exampleFormControlFile1" style="background-color: white">
+</div>
+<br>
+<div class="row"><h5>Category of Topic</h5>
+   <div class="col-md-6">
+    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Select Topic</label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  </div>
+
+  <div class="col-md-6">
+    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Topic Name</label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+    <option selected>Choose...</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  </div>
+   
+</div>
+<br>
+
+<div><h5>What they will learn</h5>
+  <div class="form-group">
+            <textarea class="form-control" placeholder="Brief about what they will learn" rows="4"></textarea>
+  </div>
+
+</div>
+      <div class="row">
+        
+  <div class="col">
+    <label for="batchOffering">No. of Batch Offering</label>
+    <div class="form-group col-md-3">
+      
+      <input type="text" class="form-control" id="batchOffering">
+    </div>
+
+    <p class="card-text">Schedule of Batch 1</p>
+    <p class="card-text">Mon, 6:00pm-7:00pm</p><br/>
+    <p class="card-text">Schedule of Batch 2</p>
+    <p class="card-text">Wed, 6:00pm-7:00pm</p>
+    <p class="card-text">Fri, 11:00pm-12:00pm</p>
+              
+  </div>
+  <div class="col">
+    <label for="batchClsWeek">No. of Classes per Week</label>
+    <div class="form-group col-md-3">
+      
+      <input type="text" class="form-control" id="batchClsWeek">
+    </div>
+    <p>Batch 1 start date</p>
+    <p >24-04-21</p><br/>
+    <p>Batch 2 start date</p>
+    <p >26-04-21</p>
+
+  </div>
+  <div class="col">
+<label for="batchClsBatch">No. of Classes per Batch</label>
+    <div class="form-group col-md-3">
+      
+      <input type="text" class="form-control" id="batchClsBatch">
+    </div>
+  </div>
+  </div>
+  <div class="row"></div>
+  </div>
+
+
+</body>
+</html>
+
+
+
+
+        
