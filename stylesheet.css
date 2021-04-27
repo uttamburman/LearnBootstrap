@@ -1,0 +1,18 @@
+.nav_bar{
+	position: absolute;
+	width: 1440px;
+	height: 72px;
+	left: 0px;
+	top: 0px;
+
+	background: #FFFFFF;
+	border: 1px solid #E8E8E8;
+	box-sizing: border-box;
+}
+
+.checked{
+	color:orange;
+}
+.greencheck{
+	color:green;
+}
