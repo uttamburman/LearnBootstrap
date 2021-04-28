@@ -16,3 +16,9 @@
 .greencheck{
 	color:green;
 }
+.fa { padding:8px; background-color:rgba(255,255,255,0); color:#fff; margin-right:4px; }
+.icon-btn { 
+	padding: 1px 15px 3px 2px; 
+	border-radius:50px;
+	height:36px !important;
+}
