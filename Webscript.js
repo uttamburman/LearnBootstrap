@@ -9,7 +9,7 @@ $(document).ready(function(){
         //$('.schedules_wrapper').append("<div class=\"row\">Schedules for Batch"+i+"</div>");
         while(j<=i){
           
-          $('.schedules_wrapper').append("<div class=\"row\">Schedules for Batch"+j+"</div><div class=\"row\"><div class=\"col\">Day</div><div class=\"col\">Time</div></div><div class=\"batchScheduleRow"+j+"\"><div class=\"row \"><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+j+"\" id=\"batchOffering\"></div></div><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+j+"\" id=\"batchOffering\"></div></div> <button class=\"btn btn-primary\" type=\"button\" onClick=\"addBatch("+j+",1)\">Add</button><button class=\"btn btn-danger\" type=\"button\">Delete</button></div><br/></div");
+          $('.schedules_wrapper').append("<div class=\"row\">Schedules for Batch"+j+"</div><div class=\"row\"><div class=\"col\">Day</div><div class=\"col\">Time</div></div><div class=\"batchScheduleRow"+j+"\"><div class=\"row \"><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+j+"\" id=\"batchOffering\"></div></div><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+j+"\" id=\"batchOffering\"></div></div> <button class=\"btn icon-btn btn-success\" href=\"#\" onClick=\"addBatch("+j+",1)\"><span class=\"fa fa-plus\"></span>Add</button><button class=\"btn icon-btn btn-danger\" href=\"#\" onClick=\"deleteSchedule("+j+",1)\"><span class=\"fa fa-trash\"></span>Delete</button></div><br/></div");
           j++;
         }        
         return false;    //<---- Add this line
@@ -19,8 +19,9 @@ $(document).ready(function(){
 function addBatch(batch, schedule) {
       //
       console.log(batch+"  "+schedule);
-       $('.batchScheduleRow'+batch).append("<div class=\"row \"><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+batch+"\" id=\"batchOffering\"></div></div><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+batch+"\" id=\"batchOffering\"></div></div> <button class=\"btn btn-primary\" type=\"button\" onClick=\"addBatch("+batch+","+schedule+")\">Add</button><button class=\"btn btn-danger\" type=\"button\">Delete</button></div><br/>");
+       $('.batchScheduleRow'+batch).append("<div class=\"row \"><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+batch+"\" id=\"batchOffering\"></div></div><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+batch+"\" id=\"batchOffering\"></div></div> <button class=\"btn icon-btn btn-success\" href=\"#\" onClick=\"addBatch("+batch+","+schedule+")\"><span class=\"fa fa-plus\"></span>Add</button><button class=\"btn icon-btn btn-danger\" href=\"#\" onClick=\"deleteSchedule("+batch+","+schedule+")\"><span class=\"fa fa-trash\"></span>Delete</button></div><br/>");
     }
+
 
 
 
