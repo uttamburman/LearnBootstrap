@@ -1,22 +1,27 @@
 
+
 $(document).ready(function(){
     $('.batchOffering').keypress(function (e) {
       if (e.which == 13) {
         var i=$('.batchOffering').val();
+        var j=1;
         console.log(i);
         //$('.schedules_wrapper').append("<div class=\"row\">Schedules for Batch"+i+"</div>");
-        while(i>0){
+        while(j<=i){
           
-          $('.schedules_wrapper').append("<div class=\"row\">Schedules for Batch"+i+"</div><div class=\"row\"><div class=\"col\">Day</div><div class=\"col\">Time</div></div><div class=\"row\"><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+i+"\" id=\"batchOffering\"></div></div><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+i+"\" id=\"batchOffering\"></div></div> <button class=\"btn btn-light\" type=\"button\" onClick=\"addBatch("+i+",1)\">Add</button><button class=\"btn btn-light\" type=\"button\">Delete</button></div");
-          i--;
-        }
-        
+          $('.schedules_wrapper').append("<div class=\"row\">Schedules for Batch"+j+"</div><div class=\"row\"><div class=\"col\">Day</div><div class=\"col\">Time</div></div><div class=\"batchScheduleRow"+j+"\"><div class=\"row \"><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+j+"\" id=\"batchOffering\"></div></div><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+j+"\" id=\"batchOffering\"></div></div> <button class=\"btn btn-primary\" type=\"button\" onClick=\"addBatch("+j+",1)\">Add</button><button class=\"btn btn-danger\" type=\"button\">Delete</button></div><br/></div");
+          j++;
+        }        
         return false;    //<---- Add this line
       } 
     });
-
-    
 });
+function addBatch(batch, schedule) {
+      //
+      console.log(batch+"  "+schedule);
+       $('.batchScheduleRow'+batch).append("<div class=\"row \"><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+batch+"\" id=\"batchOffering\"></div></div><div class=\"col\"><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule"+batch+"\" id=\"batchOffering\"></div></div> <button class=\"btn btn-primary\" type=\"button\" onClick=\"addBatch("+batch+","+schedule+")\">Add</button><button class=\"btn btn-danger\" type=\"button\">Delete</button></div><br/>");
+    }
+
 
 
 
