@@ -1,30 +1,19 @@
 
+
 $(document).ready(function(){
-    $.ajax({
-    url: "test.csv",
-    success: function (data) {
-        var arr = $.csv.toArray(data);
-        console.log(arr);
-    },
-    dataType: "text",
+    $('.batchOffering').keypress(function (e) {
+      if (e.which == 13) {
+        var i=$('.batchOffering').val();
+        console.log(i);
+        while(i>0){
+          $('.schedules_wrapper').append("<div class=\"row\"><div class=\"col\"><label for=\"batchSchedule\""+i+">No. of Batch Offering</label><div class=\"form-group col-md-10\"><input type=\"text\" class=\"form-control batchSchedule\""+i+" id=\"batchOffering\"></div></div><div class=\"col\"></div></div");
+          i--;
+        }
+        
+        return false;    //<---- Add this line
+      } 
     });
 });
 
- function getRecords() {
-      /*console.log("Reached Function");
-      var arr =$.csv.toArray("resource/file/CSVconvertor.csv");
-      var dataString = JSON.stringify(arr);
-      console.log(dataString);*/
-    /*$.ajax({
-    url: "resource/file/CSVconvertor.csv",
-    success: function (data) {
-        var arr = $.csvtoArray(data);
-        _oncomplete(arr);
-    },
-    dataType: "text",
-    });
 
-   _oncomplete: function (arr) {
-    console.out(arr);
-    }*/
-  }
+
