@@ -22,3 +22,7 @@
 	border-radius:50px;
 	height:36px !important;
 }
+.btn-danger{
+	background-color: #502c6c !important;
+	border-color: #502c6c !important;
+}
